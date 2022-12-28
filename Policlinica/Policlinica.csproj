@@ -33,6 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet.Async, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Renci.SshNet.Async.1.4.0\lib\net40\Renci.SshNet.Async.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,67 +62,142 @@
     <Compile Include="AddUtilizator.Designer.cs">
       <DependentUpon>AddUtilizator.cs</DependentUpon>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddAsistent.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddAsistent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddAsistent.Designer.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddAsistent.Designer.cs">
       <DependentUpon>AddAsistent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddExpert.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddExpert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddInspector.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddInspector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddMedic.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddMedic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FunctiiAngajati\AddReceptioner.cs">
+    <Compile Include="Adaugare FunctiiAngajati\AddReceptioner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Functii\AddAdmin.cs">
+    <Compile Include="Adaugare Functii\AddAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Functii\AddAdmin.Designer.cs">
+    <Compile Include="Adaugare Functii\AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functii\AddSuperAdmin.cs">
+    <Compile Include="Adaugare Functii\AddSuperAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Functii\AddSuperAdmin.Designer.cs">
+    <Compile Include="Adaugare Functii\AddSuperAdmin.Designer.cs">
       <DependentUpon>AddSuperAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functii\AddAngajat.cs">
+    <Compile Include="Adaugare Functii\AddAngajat.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informatii angajati\Orar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informatii angajati\Orar.Designer.cs">
+      <DependentUpon>Orar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMenu.Designer.cs">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuAdmin.Designer.cs">
+      <DependentUpon>MeniuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuAsistent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuAsistent.Designer.cs">
+      <DependentUpon>MeniuAsistent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuExpert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuExpert.Designer.cs">
+      <DependentUpon>MeniuExpert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuInspector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuInspector.Designer.cs">
+      <DependentUpon>MeniuInspector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuMedic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuMedic.Designer.cs">
+      <DependentUpon>MeniuMedic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuReceptioner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuReceptioner.Designer.cs">
+      <DependentUpon>MeniuReceptioner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniuri\MeniuSuperAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniuri\MeniuSuperAdmin.Designer.cs">
+      <DependentUpon>MeniuSuperAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddUtilizator.resx">
       <DependentUpon>AddUtilizator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FunctiiAngajati\AddAsistent.resx">
+    <EmbeddedResource Include="Adaugare FunctiiAngajati\AddAsistent.resx">
       <DependentUpon>AddAsistent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FunctiiAngajati\AddExpert.resx">
+    <EmbeddedResource Include="Adaugare FunctiiAngajati\AddExpert.resx">
       <DependentUpon>AddExpert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FunctiiAngajati\AddInspector.resx">
+    <EmbeddedResource Include="Adaugare FunctiiAngajati\AddInspector.resx">
       <DependentUpon>AddInspector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FunctiiAngajati\AddMedic.resx">
+    <EmbeddedResource Include="Adaugare FunctiiAngajati\AddMedic.resx">
       <DependentUpon>AddMedic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FunctiiAngajati\AddReceptioner.resx">
+    <EmbeddedResource Include="Adaugare FunctiiAngajati\AddReceptioner.resx">
       <DependentUpon>AddReceptioner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Functii\AddAdmin.resx">
+    <EmbeddedResource Include="Adaugare Functii\AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Functii\AddSuperAdmin.resx">
+    <EmbeddedResource Include="Adaugare Functii\AddSuperAdmin.resx">
       <DependentUpon>AddSuperAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Functii\AddAngajat.resx">
+    <EmbeddedResource Include="Adaugare Functii\AddAngajat.resx">
       <DependentUpon>AddAngajat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMenu.resx">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuAsistent.resx">
+      <DependentUpon>MeniuAsistent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuExpert.resx">
+      <DependentUpon>MeniuExpert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuInspector.resx">
+      <DependentUpon>MeniuInspector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuMedic.resx">
+      <DependentUpon>MeniuMedic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuReceptioner.resx">
+      <DependentUpon>MeniuReceptioner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniuri\MeniuSuperAdmin.resx">
+      <DependentUpon>MeniuSuperAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +208,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,4 +223,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+   if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

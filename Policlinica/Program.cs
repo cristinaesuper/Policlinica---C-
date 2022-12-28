@@ -13,7 +13,9 @@ namespace Policlinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            //new LoginMenu().Show();
+            Application.Run(new LoginMenu());
+            //Application.Run();
         }
     }
 }
