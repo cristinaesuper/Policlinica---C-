@@ -30,21 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Prenume = new System.Windows.Forms.Label();
+            this.Nume = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Nume = new System.Windows.Forms.Label();
-            this.Prenume = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,24 +70,15 @@
             this.tabPage1.Text = "Gestiunea resurselor umane";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabControl2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(794, 411);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Operatii financiar contabile";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(794, 411);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Gestiunea activitatilor operationale";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Location = new System.Drawing.Point(94, 66);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(602, 288);
+            this.tabControl2.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -105,47 +97,15 @@
             this.tabPage4.Text = "Cautare angajat";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button1
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(211, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // Nume
-            // 
-            this.Nume.AutoSize = true;
-            this.Nume.Location = new System.Drawing.Point(46, 41);
-            this.Nume.Name = "Nume";
-            this.Nume.Size = new System.Drawing.Size(43, 16);
-            this.Nume.TabIndex = 3;
-            this.Nume.Text = "Nume";
-            this.Nume.Click += new System.EventHandler(this.Nume_Click);
-            // 
-            // Prenume
-            // 
-            this.Prenume.AutoSize = true;
-            this.Prenume.Location = new System.Drawing.Point(46, 84);
-            this.Prenume.Name = "Prenume";
-            this.Prenume.Size = new System.Drawing.Size(61, 16);
-            this.Prenume.TabIndex = 4;
-            this.Prenume.Text = "Prenume";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Functie";
+            this.button1.Location = new System.Drawing.Point(469, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 37);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Cautare";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBox1
             // 
@@ -165,24 +125,75 @@
             this.listBox1.Size = new System.Drawing.Size(206, 100);
             this.listBox1.TabIndex = 19;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(469, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 37);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Cautare";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Functie";
             // 
-            // tabControl2
+            // Prenume
             // 
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(94, 66);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(602, 288);
-            this.tabControl2.TabIndex = 0;
+            this.Prenume.AutoSize = true;
+            this.Prenume.Location = new System.Drawing.Point(46, 84);
+            this.Prenume.Name = "Prenume";
+            this.Prenume.Size = new System.Drawing.Size(61, 16);
+            this.Prenume.TabIndex = 4;
+            this.Prenume.Text = "Prenume";
+            // 
+            // Nume
+            // 
+            this.Nume.AutoSize = true;
+            this.Nume.Location = new System.Drawing.Point(46, 41);
+            this.Nume.Name = "Nume";
+            this.Nume.Size = new System.Drawing.Size(43, 16);
+            this.Nume.TabIndex = 3;
+            this.Nume.Text = "Nume";
+            this.Nume.Click += new System.EventHandler(this.Nume_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(211, 81);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(112, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(211, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(112, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(794, 411);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Operatii financiar contabile";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(794, 411);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Gestiunea activitatilor operationale";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(594, 259);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "Vizualizare orar luna in curs";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // MeniuInspector
             // 
@@ -194,9 +205,9 @@
             this.Text = "MeniuAngajat";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,5 +227,6 @@
         private System.Windows.Forms.Label Nume;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabPage tabPage5;
     }
 }
