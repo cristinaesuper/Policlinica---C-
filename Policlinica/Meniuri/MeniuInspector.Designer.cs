@@ -39,13 +39,15 @@
             this.Nume = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -56,7 +58,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-1, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(802, 440);
+            this.tabControl1.Size = new System.Drawing.Size(932, 626);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -65,7 +67,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(794, 411);
+            this.tabPage1.Size = new System.Drawing.Size(924, 597);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Gestiunea resurselor umane";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -77,11 +79,12 @@
             this.tabControl2.Location = new System.Drawing.Point(94, 66);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(602, 288);
+            this.tabControl2.Size = new System.Drawing.Size(730, 486);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.dataGridView1);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Controls.Add(this.label1);
@@ -92,14 +95,15 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(594, 259);
+            this.tabPage4.Size = new System.Drawing.Size(722, 457);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Cautare angajat";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(469, 216);
+            this.button1.Location = new System.Drawing.Point(295, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 37);
             this.button1.TabIndex = 20;
@@ -120,10 +124,11 @@
             "Receptioner",
             "Asistent Medical",
             "Medic"});
-            this.listBox1.Location = new System.Drawing.Point(211, 135);
+            this.listBox1.Location = new System.Drawing.Point(162, 135);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(206, 100);
             this.listBox1.TabIndex = 19;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -155,17 +160,28 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(211, 81);
+            this.textBox2.Location = new System.Drawing.Point(162, 78);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(112, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 35);
+            this.textBox1.Location = new System.Drawing.Point(162, 33);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 22);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(594, 259);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "Vizualizare orar luna in curs";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -186,20 +202,21 @@
             this.tabPage3.Text = "Gestiunea activitatilor operationale";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // dataGridView1
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(594, 259);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Vizualizare orar luna in curs";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(424, 53);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(259, 360);
+            this.dataGridView1.TabIndex = 21;
             // 
             // MeniuInspector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(930, 617);
             this.Controls.Add(this.tabControl1);
             this.Name = "MeniuInspector";
             this.Text = "MeniuAngajat";
@@ -208,6 +225,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +246,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -1,14 +1,11 @@
-﻿using Policlinica.Functii;
+﻿using MySql.Data.MySqlClient;
+using Policlinica.Functii;
 using Policlinica.Informatii_angajati;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Common;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Policlinica.Meniuri
 {
@@ -24,10 +21,53 @@ namespace Policlinica.Meniuri
 
         }
 
+        string cmdString;
+        MySqlDataAdapter daAdapter = null;
+        DataSet ds = null;
+        MySqlConnection conn = null;
         private void button1_Click(object sender, EventArgs e)
         {
-            Orar secondWindow = new Orar();
-            secondWindow.Show();
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Completati toate campurile!");
+            }
+            else
+            {
+
+                //Orar secondWindow = new Orar();
+                //secondWindow.Show();
+
+                conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
+                conn.Open();
+
+                string Tabel = "Utilizatori";
+                cmdString = "select * from " + Tabel;                 //!!!!!! Nu merge cu where
+                daAdapter = new MySqlDataAdapter(cmdString, conn);
+                ds = new DataSet();
+                daAdapter.Fill(ds, Tabel);
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = Tabel;
+            } 
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

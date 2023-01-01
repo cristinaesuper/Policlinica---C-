@@ -178,6 +178,9 @@
     <EmbeddedResource Include="Adaugare Functii\AddAngajat.resx">
       <DependentUpon>AddAngajat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informatii angajati\Orar.resx">
+      <DependentUpon>Orar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginMenu.resx">
       <DependentUpon>LoginMenu.cs</DependentUpon>
     </EmbeddedResource>
