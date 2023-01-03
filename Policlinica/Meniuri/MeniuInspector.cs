@@ -40,8 +40,8 @@ namespace Policlinica.Meniuri
                 conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                 conn.Open();
 
-                string Tabel = "Utilizatori";
-                cmdString = "select * from " + Tabel;                 //!!!!!! Nu merge cu where
+                string Tabel = "Orar";
+                cmdString = "select * from Orar where Orar.numeMedic = " + textBox1.Text + ";";                 //!!!!!! Nu merge cu where
                 daAdapter = new MySqlDataAdapter(cmdString, conn);
                 ds = new DataSet();
                 daAdapter.Fill(ds, Tabel);
@@ -66,6 +66,11 @@ namespace Policlinica.Meniuri
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
