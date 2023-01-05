@@ -12,9 +12,14 @@ namespace Policlinica.Meniuri
 {
     public partial class MeniuAdmin : Form
     {
-        public MeniuAdmin()
+        string numeAdmin;
+        string prenumeAdmin;
+        public MeniuAdmin(string nume, string prenume)
         {
             InitializeComponent();
+
+            numeAdmin = nume;
+            prenumeAdmin = prenume;
         }
     }
 }

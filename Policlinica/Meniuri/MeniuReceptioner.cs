@@ -12,9 +12,14 @@ namespace Policlinica.Meniuri
 {
     public partial class MeniuReceptioner : Form
     {
-        public MeniuReceptioner()
+        string numeReceptioner;
+        string prenumeReceptioner;
+        public MeniuReceptioner(string nume, string prenume)
         {
             InitializeComponent();
+
+            numeReceptioner = nume;
+            prenumeReceptioner = prenume;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,6 +38,16 @@ namespace Policlinica.Meniuri
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

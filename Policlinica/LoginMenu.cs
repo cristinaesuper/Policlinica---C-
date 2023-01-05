@@ -126,13 +126,25 @@ namespace Policlinica
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "" || textBox2.Text == "")
+                MessageBox.Show("Completati toate campurile!");
+
+            else if (listBox1.Text == "")
+                MessageBox.Show("Alegeti un tip de utilizator!");
+
+            else if (textBox1.Text != "angajat" && textBox1.Text != "administrator" && textBox1.Text != "super-administrator")
+                MessageBox.Show("Utilizator nevalid!");
+
+            else if (textBox2.Text != "cristinadariusbd10*")
+                MessageBox.Show("Parola nevalida!");
+
             if (listBox1.Text == "Administrator")
                 if (string.Compare(textBox1.Text, "administrator") == 0)
                 {
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='administrator';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuAdmin secondWindow = new MeniuAdmin();
+                    MeniuAdmin secondWindow = new MeniuAdmin(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -142,7 +154,7 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='super-administrator';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuSuperAdmin secondWindow = new MeniuSuperAdmin();
+                    MeniuSuperAdmin secondWindow = new MeniuSuperAdmin(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -153,7 +165,7 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuInspector secondWindow = new MeniuInspector();
+                    MeniuInspector secondWindow = new MeniuInspector(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -164,7 +176,7 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuExpert secondWindow = new MeniuExpert();
+                    MeniuExpert secondWindow = new MeniuExpert(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -175,7 +187,7 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuReceptioner secondWindow = new MeniuReceptioner();
+                    MeniuReceptioner secondWindow = new MeniuReceptioner(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -186,7 +198,7 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuAsistent secondWindow = new MeniuAsistent();
+                    MeniuAsistent secondWindow = new MeniuAsistent(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
 
@@ -197,10 +209,25 @@ namespace Policlinica
                     conn = new MySqlConnection("Server=127.0.0.1;Database=policlinica;Uid='angajat';Pwd='cristinadariusbd10*';");
                     conn.Open();
 
-                    MeniuMedic secondWindow = new MeniuMedic();
+                    MeniuMedic secondWindow = new MeniuMedic(textBox3.Text, textBox4.Text);
                     secondWindow.Show();
                 }
             
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

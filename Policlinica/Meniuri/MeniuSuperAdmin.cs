@@ -12,12 +12,22 @@ namespace Policlinica.Meniuri
 {
     public partial class MeniuSuperAdmin : Form
     {
-        public MeniuSuperAdmin()
+        string numeSuperAdmin;
+        string prenumeSuperAdmin;
+        public MeniuSuperAdmin(string nume, string prenume)
         {
             InitializeComponent();
+
+            numeSuperAdmin = nume;
+            prenumeSuperAdmin = prenume;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
         {
 
         }

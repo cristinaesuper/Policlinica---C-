@@ -34,13 +34,13 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Nume = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -91,6 +91,7 @@
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Vizualizare orar luna in curs";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // Nume
             // 
@@ -110,15 +111,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Operatii financiar contabile";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(794, 411);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Gestiunea activitatilor operationale";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabControl3
             // 
@@ -178,6 +170,15 @@
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Profit specializare";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(794, 411);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Gestiunea activitatilor operationale";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // MeniuExpert
             // 

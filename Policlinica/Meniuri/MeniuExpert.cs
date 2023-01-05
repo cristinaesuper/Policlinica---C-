@@ -12,9 +12,14 @@ namespace Policlinica.Meniuri
 {
     public partial class MeniuExpert : Form
     {
-        public MeniuExpert()
+        string numeExpert;
+        string prenumeExpert;
+        public MeniuExpert(string nume, string prenume)
         {
             InitializeComponent();
+
+            numeExpert = nume;
+            prenumeExpert = prenume;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -23,6 +28,11 @@ namespace Policlinica.Meniuri
         }
 
         private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
         {
 
         }
